@@ -9,7 +9,7 @@ const Nav = styled.nav`
   top: 0;
   right: 0;
   bottom: 0;
-  width: 17rem;
+  width: 15rem;
   padding: 2rem 1rem;
   background-color: ${props => props.theme.white};
   transform: ${props =>

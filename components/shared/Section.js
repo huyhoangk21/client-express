@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Section = styled.section`
-  padding: 0 ${props => props.theme.pxS};
+  padding: ${props => props.theme.py} ${props => props.theme.pxS};
 
   @media screen and (min-width: 768px) {
     padding: 0 ${props => props.theme.pxM};

@@ -4,11 +4,12 @@ const theme = {
   black: '000',
   transparent: 'transparent',
   pageTitle: '3rem',
-  pxS: '2rem',
+  pxS: '0.5rem',
   pxM: '4rem',
   pxL: '8rem',
   pxXL: '10rem',
   pxXXL: '25rem',
+  py: '4rem',
 };
 
 export default theme;
