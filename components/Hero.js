@@ -18,7 +18,7 @@ const Hero = styled.section`
 
   ${Button} {
     margin-top: 2rem;
-    padding: 0.5rem 2rem;
+    padding: 0.7rem 3rem;
   }
 `;
 

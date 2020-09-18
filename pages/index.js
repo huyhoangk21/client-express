@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import Head from 'next/head';
-import { Button, PageTitle } from '../components/shared';
-import { Hero } from '../components/';
+import { Button, PageTitle, Logo } from '../components/shared';
+import { Hero, Header } from '../components/';
 
 export default function Home() {
   return (
@@ -13,6 +13,9 @@ export default function Home() {
           rel='stylesheet'
         />
       </Head>
+      <Header>
+        <Logo>Express</Logo>
+      </Header>
       <Hero img='/images/hero-bg.jpg'>
         <PageTitle>Chúng tôi chuyển hàng</PageTitle>
         <Button white>Đọc thêm !</Button>
