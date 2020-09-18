@@ -8,7 +8,7 @@ const Button = styled.button`
   padding: 0.5rem 1rem;
   text-transform: uppercase;
   cursor: pointer;
-  transition: all ${props => props.theme.transitionNormal};
+  transition: all 0.4s ease;
   outline: none;
   &:hover,
   &:focus {
