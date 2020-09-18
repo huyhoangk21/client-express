@@ -9,13 +9,14 @@ const Nav = styled.nav`
   top: 0;
   right: 0;
   bottom: 0;
-  width: 15rem;
+  width: 17rem;
   padding: 2rem 1rem;
   background-color: ${props => props.theme.white};
   transform: ${props =>
     props.openMobileNav ? `translateX(0)` : `translateX(100%)`};
   transition: transform 0.4s;
-  ${Icon} {
+
+  ${Icon}.close {
     font-size: 1.5rem;
     margin-left: auto;
     cursor: pointer;
@@ -23,6 +24,21 @@ const Nav = styled.nav`
     &:hover {
       color: ${props => props.theme.main};
     }
+
+    @media screen and (min-width: 992px) {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    position: relative;
+    width: 60%;
+    color: ${props => props.theme.white};
+    background-color: ${props => props.theme.transparent};
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    transform: translateX(0);
   }
 `;
 

@@ -15,6 +15,10 @@ const Header = styled.header`
     font-size: 1.5rem;
     color: ${props => props.theme.white};
     cursor: pointer;
+
+    @media screen and (min-width: 992px) {
+      display: none;
+    }
   }
 
   @media screen and (min-width: 768px) {

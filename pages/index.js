@@ -1,5 +1,5 @@
-import { Button, PageTitle } from '../components/shared';
-import { Hero, Layout } from '../components/';
+import { Button, PageTitle, SectionTitle } from '../components/shared';
+import { Hero, Layout, About } from '../components/';
 
 export default function Home() {
   return (
@@ -8,6 +8,7 @@ export default function Home() {
         <PageTitle>Chúng tôi chuyển hàng</PageTitle>
         <Button white>Đọc thêm !</Button>
       </Hero>
+      <About />
     </Layout>
   );
 }

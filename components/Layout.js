@@ -16,7 +16,6 @@ const Layout = ({ title, children }) => {
         setOpenMobileNav(false);
       }
     };
-
     window.addEventListener('click', openNav);
 
     return () => {
@@ -42,7 +41,7 @@ const Layout = ({ title, children }) => {
         <Logo>Express</Logo>
         <Nav openMobileNav={openMobileNav} ref={navRef}>
           <Icon
-            className='las la-times'
+            className='las la-times close'
             onClick={() => setOpenMobileNav(false)}
           />
           <Link href='/'>
