@@ -75,7 +75,12 @@ const Layout = ({ title, children }) => {
         />
       </Header>
       <div id='content'>{children}</div>
-      <Footer>This is a footer</Footer>
+      <Footer>
+        <p>
+          Copyright <i class='las la-copyright'></i> 2020 Pham Chu Express. All
+          Rights Reserved.
+        </p>
+      </Footer>
     </Fragment>
   );
 };
