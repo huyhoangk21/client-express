@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Header, Footer, Nav } from '../components';
 import { Logo } from '../components/shared';
 
-const Layout = ({ title, children }) => {
+const Layout = ({ title, children, defaultScroll }) => {
   const [openMobileNav, setOpenMobileNav] = useState(false);
   const [scroll, setScroll] = useState(false);
   const navRef = useRef();
@@ -48,9 +48,12 @@ const Layout = ({ title, children }) => {
           rel='stylesheet'
           href='https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css'></link>
       </Head>
-      <Header scroll={scroll}>
+      <Header scroll={defaultScroll || scroll}>
         <Logo>Express</Logo>
-        <Nav openMobileNav={openMobileNav} ref={navRef} scroll={scroll}>
+        <Nav
+          openMobileNav={openMobileNav}
+          ref={navRef}
+          scroll={defaultScroll || scroll}>
           <i
             className='las la-times close'
             onClick={() => setOpenMobileNav(false)}
@@ -77,8 +80,8 @@ const Layout = ({ title, children }) => {
       <div id='content'>{children}</div>
       <Footer>
         <p>
-          Copyright <i class='las la-copyright'></i> 2020 Pham Chu Express. All
-          Rights Reserved.
+          Copyright <i className='las la-copyright'></i> 2020 Pham Chu Express.
+          All Rights Reserved.
         </p>
       </Footer>
     </Fragment>

@@ -6,4 +6,6 @@ export { default as About } from './About';
 export { default as Service } from './Service';
 export { default as Process } from './Process';
 export { default as Blog } from './Blog';
+export { default as Contact } from './Contact';
+export { default as ContactForm } from './ContactForm';
 export { default as Footer } from './Footer';
