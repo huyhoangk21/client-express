@@ -2,6 +2,7 @@ const theme = {
   main: '#f16821',
   white: '#fff',
   black: '000',
+  ghostwhite: '#f8f9fa',
   transparent: 'transparent',
   pageTitle: '3rem',
   pxS: '0.5rem',

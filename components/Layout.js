@@ -9,6 +9,7 @@ const Container = styled.div``;
 
 const Layout = ({ title, children }) => {
   const [openMobileNav, setOpenMobileNav] = useState(false);
+
   const navRef = useRef();
   useEffect(() => {
     const openNav = e => {

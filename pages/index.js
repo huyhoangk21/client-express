@@ -1,5 +1,6 @@
 import { Button, PageTitle, SectionTitle } from '../components/shared';
-import { Hero, Layout, About } from '../components/';
+import { Hero, Layout, About, Service } from '../components/';
+import { renderedServices } from '../content/home';
 
 export default function Home() {
   return (
@@ -29,6 +30,10 @@ export default function Home() {
           alt='Công ty vận chuyển Phạm Chu'
         />
       </About>
+      <Service>
+        <SectionTitle>Các dịch vụ</SectionTitle>
+        <Service.Content>{renderedServices}</Service.Content>
+      </Service>
     </Layout>
   );
 }
