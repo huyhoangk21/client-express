@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Header, Footer, Nav } from '../components';
-import { Logo, Icon } from '../components/shared';
+import { Logo } from '../components/shared';
 
 const Container = styled.div``;
 
@@ -41,7 +41,7 @@ const Layout = ({ title, children }) => {
       <Header>
         <Logo>Express</Logo>
         <Nav openMobileNav={openMobileNav} ref={navRef}>
-          <Icon
+          <i
             className='las la-times close'
             onClick={() => setOpenMobileNav(false)}
           />
@@ -58,7 +58,7 @@ const Layout = ({ title, children }) => {
             <Nav.Item>Liên hệ</Nav.Item>
           </Link>
         </Nav>
-        <Icon
+        <i
           className='las la-bars hamburger'
           onClick={() => setOpenMobileNav(true)}
           ref={navRef}

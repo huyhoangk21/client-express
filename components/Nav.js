@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Icon } from './shared';
 import PropTypes from 'prop-types';
 
 const Nav = styled.nav`
@@ -16,7 +15,7 @@ const Nav = styled.nav`
     props.openMobileNav ? `translateX(0)` : `translateX(100%)`};
   transition: transform 0.4s;
 
-  ${Icon}.close {
+  i.close {
     font-size: 1.5rem;
     margin-left: auto;
     cursor: pointer;

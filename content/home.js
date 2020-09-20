@@ -1,6 +1,26 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Link from 'next/link';
-import { Card, Icon } from '../components/shared';
+import { Card } from '../components/shared';
+
+const about = [
+  `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis
+deleniti reprehenderit animi est eaque corporis! Nisi, asperiores
+nam amet doloribus, soluta ut reiciendis. Consequatur modi rem, vero
+eos ipsam voluptas.`,
+  `Error minus sint nobis dolor laborum architecto, quaerat. Voluptatum
+  porro expedita labore esse velit veniam laborum quo obcaecati
+  similique iusto delectus quasi!`,
+];
+
+export const renderedAbout = about.map(info => {
+  return (
+    <Fragment key={info}>
+      <p>{info}</p>
+      <br />
+    </Fragment>
+  );
+});
+
 const services = [
   {
     icon: 'las la-plane',
@@ -49,7 +69,7 @@ const services = [
 export const renderedServices = services.map(service => {
   return (
     <Card key={service.title}>
-      <Icon className={service.icon} />
+      <i className={service.icon} />
       <Card.Content>
         <h4>{service.title}</h4>
         <p>{service.text}</p>

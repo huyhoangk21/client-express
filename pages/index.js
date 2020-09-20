@@ -1,6 +1,6 @@
 import { Button, PageTitle, SectionTitle } from '../components/shared';
 import { Hero, Layout, About, Service } from '../components/';
-import { renderedServices } from '../content/home';
+import { renderedServices, renderedAbout } from '../content/home';
 
 export default function Home() {
   return (
@@ -12,18 +12,7 @@ export default function Home() {
       <About>
         <About.Content>
           <SectionTitle>Về chúng tôi</SectionTitle>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis
-            deleniti reprehenderit animi est eaque corporis! Nisi, asperiores
-            nam amet doloribus, soluta ut reiciendis. Consequatur modi rem, vero
-            eos ipsam voluptas.
-          </p>
-          <br />
-          <p>
-            Error minus sint nobis dolor laborum architecto, quaerat. Voluptatum
-            porro expedita labore esse velit veniam laborum quo obcaecati
-            similique iusto delectus quasi!
-          </p>
+          {renderedAbout}
         </About.Content>
         <About.Image
           src='/images/about.jpg'

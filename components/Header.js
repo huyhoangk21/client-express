@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Icon } from './shared';
 const Header = styled.header`
   position: fixed;
   width: 100%;
@@ -11,7 +10,7 @@ const Header = styled.header`
   background-color: ${props => props.theme.transparent};
   padding: 0 ${props => props.theme.pxS};
 
-  ${Icon}.hamburger {
+  i.hamburger {
     font-size: 1.5rem;
     color: ${props => props.theme.white};
     cursor: pointer;

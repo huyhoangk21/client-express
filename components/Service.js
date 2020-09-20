@@ -1,9 +1,16 @@
 import styled from 'styled-components';
-import { Section } from './shared';
+import { Section, SectionTitle } from './shared';
+const Service = styled(Section)`
+  ${SectionTitle} {
+    margin-bottom: 1rem;
+  }
+`;
 
-const Service = styled(Section)``;
-
-const Content = styled.div``;
+const Content = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`;
 
 Service.Content = Content;
 
