@@ -80,3 +80,33 @@ export const renderedServices = services.map(service => {
     </Card>
   );
 });
+
+const process = [
+  {
+    title: 'Đăng kí vận chuyển',
+    text:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt praesentium dicta consectetur fuga neque fugit a at. Cum quod vero assumenda iusto.',
+  },
+  {
+    title: 'Gửi hàng',
+    text:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt praesentium dicta consectetur fuga neque fugit a at. Cum quod vero assumenda iusto.',
+  },
+  {
+    title: 'Kí tên biên nhận',
+    text:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt praesentium dicta consectetur fuga neque fugit a at. Cum quod vero assumenda iusto.',
+  },
+];
+
+export const renderedProcess = process.map((info, index) => {
+  return (
+    <Card key={info.title}>
+      <Card.Content>
+        <div className='rounded-number'>{index + 1}</div>
+        <h4>{info.title}</h4>
+        <p>{info.text}</p>
+      </Card.Content>
+    </Card>
+  );
+});

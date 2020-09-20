@@ -1,6 +1,10 @@
 import { Button, PageTitle, SectionTitle } from '../components/shared';
-import { Hero, Layout, About, Service } from '../components/';
-import { renderedServices, renderedAbout } from '../content/home';
+import { Hero, Layout, About, Service, Process } from '../components/';
+import {
+  renderedServices,
+  renderedAbout,
+  renderedProcess,
+} from '../content/home';
 
 export default function Home() {
   return (
@@ -23,6 +27,10 @@ export default function Home() {
         <SectionTitle>Các dịch vụ</SectionTitle>
         <Service.Content>{renderedServices}</Service.Content>
       </Service>
+      <Process img='/images/process.jpg'>
+        <SectionTitle>Quy trình dịch vụ</SectionTitle>
+        <Process.Content>{renderedProcess}</Process.Content>
+      </Process>
     </Layout>
   );
 }
