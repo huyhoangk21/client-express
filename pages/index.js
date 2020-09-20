@@ -1,9 +1,10 @@
 import { Button, PageTitle, SectionTitle } from '../components/shared';
-import { Hero, Layout, About, Service, Process } from '../components/';
+import { Hero, Layout, About, Service, Process, Blog } from '../components/';
 import {
   renderedServices,
   renderedAbout,
   renderedProcess,
+  renderedBlogs,
 } from '../content/home';
 
 export default function Home() {
@@ -31,6 +32,11 @@ export default function Home() {
         <SectionTitle>Quy trình dịch vụ</SectionTitle>
         <Process.Content>{renderedProcess}</Process.Content>
       </Process>
+      <Blog>
+        <SectionTitle>Thông tin</SectionTitle>
+        <Blog.Content>{renderedBlogs}</Blog.Content>
+        <Button black>Đọc các bài viết khác</Button>
+      </Blog>
     </Layout>
   );
 }

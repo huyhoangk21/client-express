@@ -23,10 +23,21 @@ const Button = styled.button`
         border-color: ${props => props.theme.white};
       }
     `}
+
+  ${props =>
+    props.black &&
+    css`
+      &:hover,
+      &:focus {
+        border-color: ${props => props.theme.black};
+        color: ${props => props.theme.black};
+      }
+    `}
 `;
 
 Button.propTypes = {
   white: PropTypes.bool,
+  black: PropTypes.bool,
 };
 
 export default Button;

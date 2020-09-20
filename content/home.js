@@ -110,3 +110,37 @@ export const renderedProcess = process.map((info, index) => {
     </Card>
   );
 });
+
+// to be replaced with fetch api
+const blogs = [
+  {
+    src: '/images/blog_1.jpg',
+    title: 'How Logistics Company Improve Spendings',
+    text:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.',
+  },
+  {
+    src: '/images/blog_2.jpg',
+    title: 'How Logistics Company Improve Spendings',
+    text:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.',
+  },
+  {
+    src: '/images/blog_3.jpg',
+    title: 'How Logistics Company Improve Spendings',
+    text:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.',
+  },
+];
+
+export const renderedBlogs = blogs.map((blog, index) => {
+  return (
+    <Card key={index}>
+      <Card.Content>
+        <img src={blog.src} alt={blog.title} />
+        <h3>{blog.title}</h3>
+        <p>{blog.text}</p>
+      </Card.Content>
+    </Card>
+  );
+});

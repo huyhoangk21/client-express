@@ -15,7 +15,6 @@ const Content = styled.div`
   display: flex;
   flex-wrap: wrap;
   color: ${props => props.theme.white};
-  margin: 0 2rem;
   justify-content: space-between;
 
   .rounded-number {
