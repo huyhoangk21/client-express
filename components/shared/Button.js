@@ -25,7 +25,7 @@ const Button = styled.button`
     `}
 
   ${props =>
-    props.black &&
+    !props.white &&
     css`
       &:hover,
       &:focus {
@@ -37,7 +37,6 @@ const Button = styled.button`
 
 Button.propTypes = {
   white: PropTypes.bool,
-  black: PropTypes.bool,
 };
 
 export default Button;

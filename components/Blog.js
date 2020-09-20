@@ -3,6 +3,9 @@ import { Section, Card, Button } from './shared';
 
 const Blog = styled(Section)`
   background-color: ${props => props.theme.ghostwhite};
+  ${Button} {
+    display: block;
+    margin: 2rem auto 0;
   }
 `;
 
