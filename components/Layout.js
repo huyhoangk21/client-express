@@ -1,16 +1,14 @@
 import { Fragment, useState, useRef, useEffect } from 'react';
-import styled from 'styled-components';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Header, Footer, Nav } from '../components';
 import { Logo } from '../components/shared';
 
-const Container = styled.div``;
-
 const Layout = ({ title, children }) => {
   const [openMobileNav, setOpenMobileNav] = useState(false);
-
+  const [scroll, setScroll] = useState(false);
   const navRef = useRef();
+
   useEffect(() => {
     const openNav = e => {
       if (!navRef.current.contains(e.target)) {
@@ -23,6 +21,18 @@ const Layout = ({ title, children }) => {
       window.removeEventListener('click', openNav);
     };
   }, [openMobileNav]);
+
+  useEffect(() => {
+    const scrollWindow = () => {
+      setScroll(window.scrollY > 200);
+    };
+
+    document.addEventListener('scroll', scrollWindow);
+
+    return () => {
+      document.removeEventListener('scroll', scrollWindow);
+    };
+  }, [scroll]);
 
   return (
     <Fragment>
@@ -38,9 +48,9 @@ const Layout = ({ title, children }) => {
           rel='stylesheet'
           href='https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css'></link>
       </Head>
-      <Header>
+      <Header scroll={scroll}>
         <Logo>Express</Logo>
-        <Nav openMobileNav={openMobileNav} ref={navRef}>
+        <Nav openMobileNav={openMobileNav} ref={navRef} scroll={scroll}>
           <i
             className='las la-times close'
             onClick={() => setOpenMobileNav(false)}
@@ -64,7 +74,7 @@ const Layout = ({ title, children }) => {
           ref={navRef}
         />
       </Header>
-      <Container>{children}</Container>
+      <div id='content'>{children}</div>
       <Footer>This is a footer</Footer>
     </Fragment>
   );

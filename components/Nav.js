@@ -32,7 +32,7 @@ const Nav = styled.nav`
   @media screen and (min-width: 992px) {
     position: relative;
     width: 60%;
-    color: ${props => props.theme.white};
+    color: ${props => (props.scroll ? props.theme.black : props.theme.white)};
     background-color: ${props => props.theme.transparent};
     flex-direction: row;
     justify-content: space-between;

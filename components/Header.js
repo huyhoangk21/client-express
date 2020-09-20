@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 const Header = styled.header`
   position: fixed;
   width: 100%;
@@ -7,12 +7,19 @@ const Header = styled.header`
   align-items: center;
   justify-content: space-between;
   position: fixed;
-  background-color: ${props => props.theme.transparent};
+  background-color: ${props =>
+    props.scroll ? props.theme.white : props.theme.transparent};
   padding: 0 ${props => props.theme.pxS};
-
+  transition: background-color 0.4s;
+  z-index: 10;
+  ${props =>
+    props.scroll &&
+    css`
+      box-shadow: 0 0 0.5rem #999999;
+    `}
   i.hamburger {
     font-size: 1.5rem;
-    color: ${props => props.theme.white};
+    color: ${props => (props.scroll ? props.theme.black : props.theme.white)};
     cursor: pointer;
 
     @media screen and (min-width: 992px) {
